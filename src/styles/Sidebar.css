@@ -4,6 +4,8 @@
   background-color: var(--alt-purple);
   display: flex;
   flex-direction: column;
+  position: absolute;
+  z-index: 101;
 }
 
 .sidebar-float {
