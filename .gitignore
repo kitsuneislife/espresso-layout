@@ -268,3 +268,4 @@ package-lock.json
 .replit
 replit.nix
 vite.config.js
+tsconfig.json
