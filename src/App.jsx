@@ -1,15 +1,21 @@
+  
+  import React from 'react'
+  import './styles/Root.css'
+  
+  import Sidebar from './components/Sidebar';
+  import { GlobalContext } from './toolbox/GlobalContext';
 
-import React from 'react'
-import './styles/Root.css'
+  
+  export default function App() {
 
-import Sidebar from './components/Sidebar';
-
-export default function App() {
-  return (
-    <main>
-      <Sidebar />
-      
-      
-    </main>
-  )
-}
+    const { page } = React.useContext(GlobalContext);
+    
+    return (
+      <main>
+        <Sidebar />
+        {page === 'home' ? <div>Oi</div> : null}
+        
+      </main>
+    )
+  }
+  
