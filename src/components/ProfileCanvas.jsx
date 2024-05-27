@@ -11,7 +11,8 @@ const ProfileCanvas = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
 
-
+    let background = new Image();
+    background.src = `https://pollux.gg/backdrops/idolproj2.png`;
     let pfp = new Image()
     pfp.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=512`;
     let layout = new Image();
@@ -20,6 +21,33 @@ const ProfileCanvas = () => {
     canvas.width = 800;
     canvas.height = 600;
 
+    background.onload = () => { 
+      const x = 60; 
+      const y = 18; 
+      const width = 720;
+      const height = 380; 
+      const radius = 20;
+
+      context.save();
+
+      context.beginPath();
+      context.moveTo(x + radius, y);
+      context.lineTo(x + width - radius, y);
+      context.quadraticCurveTo(x + width, y, x + width, y + radius);
+      context.lineTo(x + width, y + height - radius);
+      context.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      context.lineTo(x + radius, y + height);
+      context.quadraticCurveTo(x, y + height, x, y + height - radius);
+      context.lineTo(x, y + radius);
+      context.quadraticCurveTo(x, y, x + radius, y);
+      context.closePath();
+      context.clip();
+      context.drawImage(background, x, y, width, height);
+
+      context.restore();
+      //context.drawImage(background, 60, 18, 720, 380) 
+    };
+    background.onerror = (error) => { console.error('Erro ao carregar a imagem', error) };
     pfp.onload = () => {
       const x = 74;
       const y = 156; 
