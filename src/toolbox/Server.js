@@ -3,17 +3,20 @@ import axios from 'axios';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
+let URI = "https://cbf70552-6cb6-4c5d-aa53-d275c83609db-00-25rotjqv5jmj7.spock.replit.dev";
 const app = express();
-app.use((req, res, next) => {
-  const referer = req.headers.referer;
-  console.log('URL do site:', referer);
-  next();
-});
+
+/*app.use(async(req, res, next) => {
+  URI = req.headers.referer.slice(0, -1)
+  next(); 
+});*/
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = 'https://cbf70552-6cb6-4c5d-aa53-d275c83609db-00-25rotjqv5jmj7.spock.replit.dev:3001/auth/callback/';
-const FRONTEND_URI = 'https://cbf70552-6cb6-4c5d-aa53-d275c83609db-00-25rotjqv5jmj7.spock.replit.dev';
+const REDIRECT_URI = `${URI}:3001/auth/callback/`;
+const FRONTEND_URI = URI;
+
+console.log(REDIRECT_URI)
 
 app.use(cors({ origin: FRONTEND_URI, credentials: true }));
 app.use(cookieParser());

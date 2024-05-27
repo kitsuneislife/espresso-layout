@@ -1,0 +1,7 @@
+.profile {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-dimmer);
+  margin-left: 60px;
+}

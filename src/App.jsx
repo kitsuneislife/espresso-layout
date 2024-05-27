@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-
 import './styles/Root.css';
-import { GlobalContext } from './toolbox/GlobalContext';
-import Sidebar from './components/Sidebar';
 
-export default function App() {
-  const { page } = React.useContext(GlobalContext);
-  const [user, setUser] = useState(null);
+import { GlobalContext } from './toolbox/GlobalContext';
+import { UserProvider, UserContext } from './toolbox/UserContext';
+
+import Sidebar from './components/Sidebar';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+
+const MainApp = () => {
+  const { page } = useContext(GlobalContext);
+  const { user, setUser } = useContext(UserContext);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -19,25 +24,34 @@ export default function App() {
       }
     };
     fetchUser();
-  }, []);
+  }, [setUser]);
 
   const handleLogin = () => {
-    window.location.href = `${window.location.origin}:3001/auth/discord`;
+    window.location.href = `${window.location.origin.replace(':5173', '')}:3001/auth/discord`;
   };
 
   return (
     <main>
       <Sidebar />
-      {page === 'home' && <div>Oi, você está na página Home</div>}
+      {page === 'home' && <Home />}
       {page === 'collection' && <div>Oi, você está na página Collection</div>}
+      {page === 'profile' && <Profile />}
       {page === 'config' && <div>Oi, você está na página Contact</div>}
-      <div>
+      {/* <div>
         {user ? (
           <div>Bem-vindo, {user.username}</div>
         ) : (
           <button onClick={handleLogin}>Login com Discord</button>
         )}
-      </div>
+      </div> */}
     </main>
+  );
+};
+
+export default function App() {
+  return (
+    <UserProvider>
+      <MainApp />
+    </UserProvider>
   );
 }

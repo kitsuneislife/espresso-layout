@@ -24,6 +24,11 @@ function Sidebar() {
           onClick={() => setPage('collection')}
           ></i>
         <i
+          className={`fa-solid fa-user sidebar-icon supershadow-text 
+          ${page === 'profile' ? 'selected' : ''}`}
+          onClick={() => setPage('profile')}
+          ></i>
+        <i
           className={`fa-solid fa-gear sidebar-icon supershadow-text 
           ${page === 'config' ? 'selected' : ''}`}
           onClick={() => setPage('config')}
