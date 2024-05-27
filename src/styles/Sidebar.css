@@ -1,0 +1,32 @@
+.sidebar {
+  width: 60px;
+  height: 100vh;
+  background-color: var(--alt-purple);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-float {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-left: 10px;
+}
+
+.sidebar-icon {
+  font-size: 36px;
+  color: white;
+  transition: transform 0.2s;
+  cursor: url('/extra/pointer.png'), auto;
+}
+
+.sidebar-icon:hover {
+  transform: scale(1.3) rotate(-20deg);
+}
+
+.sidebar-float .selected {
+  transform: scale(1.3) rotate(-20deg);
+  color: var(--plx-yellow);
+}
