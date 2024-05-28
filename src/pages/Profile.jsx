@@ -16,7 +16,7 @@ function Profile() {
 
   return (
     <div className="profile">
-      <ProfileCanvas />
+      <ProfileCanvas className="profile_canvas" />
     </div>
   );
 }

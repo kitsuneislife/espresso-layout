@@ -27,7 +27,7 @@ const MainApp = () => {
   }, [setUser]);
 
   const handleLogin = () => {
-    window.location.href = `${window.location.origin.replace(':5173', '')}:3001/auth/discord`;
+    window.location.href = `${window.location.origin}:3001/auth/discord`;
   };
 
   return (

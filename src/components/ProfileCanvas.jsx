@@ -18,6 +18,8 @@ const ProfileCanvas = () => {
     let layout = new Image();
     layout.src = './builder/profile.png';
 
+    const panton = new FontFace('panton', 'url(./fonts/PantonExtraBold.ttf)');
+    
     canvas.width = 800;
     canvas.height = 600;
 
@@ -63,6 +65,28 @@ const ProfileCanvas = () => {
     pfp.onerror = (error) => { console.error('Erro ao carregar a imagem', error) };
     layout.onload = () => { context.drawImage(layout, 0, 0, canvas.width, canvas.height) };
     layout.onerror = (error) => { console.error('Erro ao carregar a imagem', error) };
+
+    panton.load().then((loadedFont) => {
+      document.fonts.add(loadedFont);
+
+      const username = user.username.length > 16 ? user.username.slice(0, 16) + '...' : user.username;
+      const usernameX = 615;
+      const usernameY = 542;
+
+      context.font = '42px panton';
+      context.textAlign = 'center';
+      context.textBaseline = 'middle';
+      
+      context.fillStyle = '2b2b3b'; 
+      context.strokeStyle = 'white'; 
+      context.lineWidth = 4; 
+
+      context.strokeText(username, usernameX, usernameY);
+
+      context.fillText(username, usernameX, usernameY);
+    }).catch((error) => {
+      console.error('Erro ao carregar a fonte', error);
+    });
 
   }, []);
 
