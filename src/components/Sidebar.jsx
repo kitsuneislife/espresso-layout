@@ -24,6 +24,11 @@ function Sidebar() {
           onClick={() => setPage('collection')}
           ></i>
         <i
+          className={`fa-solid fa-box-archive sidebar-icon supershadow-text 
+          ${page === 'inventory' ? 'selected' : ''}`}
+          onClick={() => setPage('inventory')}
+          ></i>
+        <i
           className={`fa-solid fa-basket-shopping sidebar-icon supershadow-text 
           ${page === 'shop' ? 'selected' : ''}`}
           onClick={() => setPage('shop')}
