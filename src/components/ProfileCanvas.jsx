@@ -17,6 +17,8 @@ const ProfileCanvas = () => {
     pfp.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=512`;
     let layout = new Image();
     layout.src = './builder/profile.png';
+    let flair = new Image();
+    flair.src = './builder/flairs/default.png';
 
     const panton = new FontFace('panton', 'url(./fonts/PantonExtraBold.ttf)');
     
@@ -70,7 +72,7 @@ const ProfileCanvas = () => {
       document.fonts.add(loadedFont);
 
       const username = user.username.length > 16 ? user.username.slice(0, 16) + '...' : user.username;
-      const usernameX = 615;
+      const usernameX = 545;
       const usernameY = 542;
 
       context.font = '42px panton';
@@ -87,6 +89,8 @@ const ProfileCanvas = () => {
     }).catch((error) => {
       console.error('Erro ao carregar a fonte', error);
     });
+    flair.onload = () => { context.drawImage(flair, 675, 464, 120, 144) };
+      flair.onerror = (error) => { console.error('Erro ao carregar a imagem', error) };
 
   }, []);
 

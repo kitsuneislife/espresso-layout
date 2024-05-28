@@ -1,0 +1,45 @@
+.shop {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main';
+  grid-template-rows: auto 1fr;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-dimmer);
+}
+
+.shop_header {
+  grid-area: header;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  height: fit-content;
+  justify-content: right;
+}
+
+.shop_header_gems {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-family: Panton;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+
+.shop_header_icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.shop_main {
+  display: flex;
+  background-color: #161522;
+  margin-left: 51px;
+}

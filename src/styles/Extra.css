@@ -1,0 +1,19 @@
+.plx-rubine {
+  background-image: url(/gems/RBN.png);
+  background-size: contain;
+}
+
+.plx-sapphire {
+  background-image: url(/gems/SPH.png);
+  background-size: contain;
+}
+
+.plx-jade {
+  background-image: url(/gems/JDE.png);
+  background-size: contain;
+}
+
+.plx-token {
+  background-image: url(/gems/EVT.png);
+  background-size: contain;
+}
