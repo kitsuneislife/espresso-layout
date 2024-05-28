@@ -8,5 +8,40 @@
   justify-content: center;
 }
 
+.profile_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile_box_minus {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .profile_canvas {
+  width: 600px;
+  height: 800px;
+}
+
+.profile_edit_button {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 150px;
+  padding: 30px 40px;
+  border: 1px solid white;
+  border-radius: 7px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  cursor: url('/extra/pointer.png'), auto;
+
+  i {
+    
+  }
+  span {
+    
+  }
 }
