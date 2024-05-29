@@ -12,7 +12,7 @@ const ProfileCanvas = () => {
     const context = canvas.getContext('2d');
 
     let background = new Image();
-    background.src = `https://pollux.gg/backdrops/idolproj2.png`;
+    background.src = `https://pollux.gg/backdrops/idolproj.png`;
     let pfp = new Image()
     pfp.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=512`;
     let layout = new Image();
