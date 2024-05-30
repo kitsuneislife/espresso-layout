@@ -104,7 +104,7 @@ function Shop() {
       )}
       <div>
         <button onClick={handleBoxModal}>Open Box</button>
-        {openBoxModal && <OpenBox item={null} onClose={handleCloseBoxModal} />}
+        {openBoxModal && <OpenBox item={DCompItems[0]} onClose={handleCloseBoxModal} />}
       </div>
       
 </div>

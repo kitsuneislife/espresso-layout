@@ -23,6 +23,12 @@
   }
 }
 
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
 .open_box_container {
   position: fixed;
   top: 0;
@@ -33,6 +39,7 @@
   justify-content: center;
   align-items: center;
   z-index: 108;
+  transform: scale(1.23);
 }
 
 .bottom_box {
@@ -56,14 +63,26 @@
   display: flex;
   gap: 20px;
   position: relative;
-  bottom: 40px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.cards_bg {
+  position: absolute;
+  z-index: 109;
+  width: 600px;
+  bottom: 32px;
+  opacity: 0;
+  filter: brightness(0.8);
+  animation: fade 4s forwards;
 }
 
 .card {
   position: relative;
-  z-index: 109;
+  z-index: 110;
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(100px);;
   animation: rise-fade var(--duration) forwards;
   --rotation: rotate(0deg);
 
@@ -73,7 +92,7 @@
 }
 
 .card_left {
-  --rotation: rotate(-2deg);
+  --rotation: rotate(-4deg);
   --duration: 2s;
 }
 
@@ -83,6 +102,6 @@
 }
 
 .card_right {
-  --rotation: rotate(2deg);
+  --rotation: rotate(4deg);
   --duration: 4s;
 }

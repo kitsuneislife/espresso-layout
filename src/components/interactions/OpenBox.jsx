@@ -25,19 +25,23 @@ function openBox({ item, onClose }) {
       <div className="bottom_box"></div>
 
       <div className="cards">
+        <img className="cards_bg" src="/loot/bgSR.png" />
         <CardCanvas 
-          item=""
+          item={item}
           position="left"
+          rarity="sr"
+        />
+        <CardCanvas 
+          item={{ amount: 75, rarity: "ur", image: '/gems/RBN.png', class: 'currency' }}
+          position="middle"
+          rarity="ur"
+        />
+        <CardCanvas 
+          item={{ amount: 200, rarity: "ur", image: '/gems/JDE.png', class: 'currency' }}
+          position="right"
           rarity="c"
         />
-        <div className="card card_middle">
-          <img src="/loot/frame_C.png"/>
-        </div>
-        <div className="card card_right">
-          <img src="/loot/frame_C.png"/>
-        </div>
       </div>
-      
     </div>
 
   );
