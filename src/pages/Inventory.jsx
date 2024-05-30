@@ -61,13 +61,13 @@ function Inventory() {
         <div className={`inv_sidebar_separator
           ${invPage === 'stickers' ? 'selected' : ''}`}
           onClick={() => setInvPage('stickers')}>
-          <i class="fa-solid fa-star inv_sidebar_icon"></i>
+          <i class="fa-solid fa-splotch inv_sidebar_icon"></i>
           <span>Stickers</span>
         </div>
         <div className={`inv_sidebar_separator
           ${invPage === 'flags' ? 'selected' : ''}`}
           onClick={() => setInvPage('flags')}>
-          <i class="fa-solid fa-flag inv_sidebar_icon"></i>
+          <i class="fa-solid fa-bookmark inv_sidebar_icon"></i>
           <span>Flags</span>
         </div>
       </div>

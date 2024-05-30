@@ -155,6 +155,15 @@
   border-radius: 4px;
   /*cursor: url('/extra/pointer.png'), auto;*/
   width: 235px;
+  .subcontainer {
+    position: relative;
+    box-shadow: inset 0 3px 20px #1133;
+  }
+}
+
+.shop_item_container.sc_rarity_ur .subcontainer {
+  background-image: radial-gradient(#ffc85c, #ff8251, #66133a);
+  position: relative;
 }
 
 .shop_item_container .sc_header {
@@ -205,7 +214,7 @@
   overflow: hidden;
   flex: 1 1 auto;
   align-self: start;
-  background-image: url(https://pollux.gg/backdrops/ccblim3.png);
+  /* background-image: url(https://pollux.gg/backdrops/ccblim3.png); */
   background-size: cover;
   background-position-x: 70%;
   box-shadow: inset 0 3px 20px #1133;
@@ -221,6 +230,23 @@
 
 .shop_item_container.sc_rarity_ur .sc_footer {
   background-color: #1b1b2fdd;
+}
+
+.shop_item_container.nonbg.sc_rarity_ur .sc_footer {
+  background: none;
+}
+.sc_body_nonbg {
+  width: 99.9%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 auto;
+  align-self: start;
+  justify-self: center;
+  /*box-shadow: inset 0 3px 20px #1133;*/
+  background-position: top;
+  background-position-y: 60%;
+  background-repeat: no-repeat;
 }
 
 .sc_button_modal {
@@ -297,6 +323,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fade-02 .3s forwards;
 }
 
 .buy_modal {

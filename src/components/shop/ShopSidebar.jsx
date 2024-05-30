@@ -37,13 +37,13 @@ function ShopSidebar({ shopPage, setShopPage }) {
       <div className={`shop_sidebar_separator
         ${shopPage === 'sticker' ? 'selected' : ''}`}
         onClick={() => setShopPage('sticker')}>
-        <i className="fa-solid fa-star shop_sidebar_icon"></i>
+        <i className="fa-solid fa-splotch shop_sidebar_icon"></i>
         <span>Stickers</span>
       </div>
       <div className={`shop_sidebar_separator
         ${shopPage === 'flag' ? 'selected' : ''}`}
         onClick={() => setShopPage('flag')}>
-        <i className="fa-solid fa-flag shop_sidebar_icon"></i>
+        <i className="fa-solid fa-bookmark shop_sidebar_icon"></i>
         <span>Flags</span>
       </div>
     </div>

@@ -180,6 +180,12 @@
   color: #ffdc73;
 }
 
+.item_container.ic_rarity_ur .ic_body.lootbox {
+  background-image: radial-gradient(#ffc85c, #ff8251, #66133a);
+  background-size: 120% 140%;
+  background-position: bottom;
+}
+
 .item_container .ic_body {
   width: 99.9%;
   height: 180px;
@@ -187,7 +193,7 @@
   overflow: hidden;
   flex: 1 1 auto;
   align-self: start;
-  background-image: url(https://pollux.gg/backdrops/ccblim3.png);
+  /*background-image: url(https://pollux.gg/backdrops/ccblim3.png);*/
   background-size: cover;
   background-position-x: 70%;
   box-shadow: inset 0 3px 20px #1133;
