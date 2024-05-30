@@ -6,7 +6,7 @@ import '../../styles/Extra.css';
 import Toolbox from '../../toolbox/Global';
 
 function ShopItem({ title, className, collection, rarity, price, image, id, onClick }) {
-  const truncatedTitle = title.length > 16 ? `${title.slice(0, 16)}...` : title;
+  const truncatedTitle = title.length > 17 ? `${title.slice(0, 17)}...` : title;
 
   const iconClasses = {
     lootbox: 'fa-solid fa-gift',

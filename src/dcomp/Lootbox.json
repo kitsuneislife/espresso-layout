@@ -1,0 +1,14 @@
+{
+  "id": 6,
+  "ida": "lootboxur",
+  "name": "Lootbox",
+  "class": "lootbox",
+  "collection": "",
+  "description": "",
+  "rarity": "ur",
+  "price": {
+    "rubine": 5000,
+    "sapphire": 4
+  },
+  "image": "/loot/lootbox.png"
+}

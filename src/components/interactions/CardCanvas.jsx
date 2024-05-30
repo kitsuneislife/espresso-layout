@@ -9,6 +9,14 @@ import '../../styles/Extra.css';
 function CardCanvas({ item, position, rarity }) {
   const canvasRef = useRef(null);
 
+  const translate_rarity = {
+      "c": "Comum",
+      "uc": "Incomum",
+      "r": "Raro",
+      "sr": "Super Raro",
+      "ur": "Ultra Raro"
+    };
+
   useEffect(() => {
     const loadImage = (src) => {
       return new Promise((resolve, reject) => {
@@ -64,6 +72,18 @@ function CardCanvas({ item, position, rarity }) {
     const drawCard = (context, frame, sparkles, image) => {
       context.drawImage(frame, 0, 0, canvasRef.current.width, canvasRef.current.height);
 
+      context.save();
+
+      context.font = "bold 22px 'Nunito'";
+      context.textAlign = "center";
+      context.textBaseline = "middle"; 
+
+      context.strokeStyle = "#121225";
+      context.lineWidth = 12;
+      context.fillStyle = "rgba(255, 255, 255, 0.6)";
+
+      context.fillText(translate_rarity[rarity], canvasRef.current.width / 2, 30);
+      
       if (item.class === "background") {
         context.save();
         context.strokeStyle = "#FFFFFF";
@@ -124,6 +144,7 @@ function CardCanvas({ item, position, rarity }) {
     const sparkles = `/loot/sparkles_1.png`;
     const panton = './fonts/PantonExtraBold.ttf';
     const pantonItalic = './fonts/PantonExtraBoldItalic.ttf';
+    const nunito = './fonts/Nunito.ttf';
 
     canvas.width = 170;
     canvas.height = 400;
@@ -133,7 +154,8 @@ function CardCanvas({ item, position, rarity }) {
       loadImage(sparkles),
       loadImage(item.image),
       loadFont('Panton', panton),
-      loadFont('Panton Italic', pantonItalic)
+      loadFont('Panton Italic', pantonItalic),
+      loadFont('Nunito', nunito)
     ]).then(([frame, sparkles, image]) => {
       drawCard(context, frame, sparkles, image);
     }).catch((error) => {

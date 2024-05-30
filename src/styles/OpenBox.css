@@ -80,7 +80,7 @@
 
 .card {
   position: relative;
-  z-index: 110;
+  z-index: 111;
   opacity: 0;
   transform: translateY(100px);;
   animation: rise-fade var(--duration) forwards;

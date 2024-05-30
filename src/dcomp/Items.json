@@ -4,7 +4,7 @@
     "ida": "idolproj",
     "name": "Idol Project Cafe",
     "class": "background",
-    "collection": "Mobius",
+    "collection": "mobius",
     "description": "This strident background graciously mimics obtuse minatoryness and shimmers with efficacious appeal. — Elon Musk",
     "rarity": "ur",
     "price": {
@@ -18,7 +18,7 @@
     "ida": "idolproj2",
     "name": "Idol Project Club",
     "class": "background",
-    "collection": "Mobius",
+    "collection": "mobius",
     "description": "This hubristic background stunningly hails insidious egregiousness and extracts with comely appeal. — Washington Post",
     "rarity": "ur",
     "price": {
@@ -32,7 +32,7 @@
     "ida": "ccblim2",
     "name": "Can Can Bunny Limited 2",
     "class": "background",
-    "collection": "Cocktail Soft",
+    "collection": "cocktail soft",
     "description": "",
     "rarity": "ur",
     "price": {
@@ -46,7 +46,7 @@
     "ida": "yojusenkibg",
     "name": "Yoju Senki Ad 2048",
     "class": "background",
-    "collection": "DO",
+    "collection": "do",
     "description": "",
     "rarity": "u",
     "price": {
@@ -60,7 +60,7 @@
     "ida": "xenomugenshitai",
     "name": "Xenon Mugen no Shitai",
     "class": "background",
-    "collection": "Cs Ware",
+    "collection": "cs ware",
     "description": "",
     "rarity": "u",
     "price": {
@@ -70,17 +70,270 @@
     "image": "https://pollux.gg/backdrops/xenomugenshitai.png"
   },
   {
-    "id": 6,
-    "ida": "lootboxur",
-    "name": "Lootbox",
-    "class": "lootbox",
+    "id": 0,
+    "ida": "sepseven03",
+    "name": "Sep7th - Street Fighter : Blanka | Pietroant",
+    "class": "background",
+    "collection": "sepseven",
+    "description": "",
+    "rarity": "c",
+    "price": {
+      "rubine": 1280,
+      "sapphire": 2
+    },
+    "image": "https://pollux.gg/backdrops/sepseven03.png"
+  },
+  {
+    "id": 0,
+    "ida": "3571a776d1ff71fde936a3baf0b3efeb",
+    "name": "AKMU",
+    "class": "background",
+    "collection": "kpop",
+    "description": "",
+    "rarity": "c",
+    "price": {
+      "rubine": 1280,
+      "sapphire": 2
+    },
+    "image": "https://pollux.gg/backdrops/3571a776d1ff71fde936a3baf0b3efeb.png"
+  },
+  {
+    "id": 0,
+    "ida": "41411d8ab0d959ce12f4b19ccf3ef022",
+    "name": "Sunmi",
+    "class": "background",
+    "collection": "kpop",
+    "description": "",
+    "rarity": "c",
+    "price": {
+      "rubine": 1280,
+      "sapphire": 2
+    },
+    "image": "https://pollux.gg/backdrops/41411d8ab0d959ce12f4b19ccf3ef022.png"
+  },
+  {
+    "id": 0,
+    "ida": "6b27095eaed6d66bdf0779656623813d",
+    "name": "Warhammer 40k soldier",
+    "class": "background",
+    "collection": "vidya",
+    "description": "",
+    "rarity": "c",
+    "price": {
+      "rubine": 1280,
+      "sapphire": 2
+    },
+    "image": "https://pollux.gg/backdrops/6b27095eaed6d66bdf0779656623813d.png"
+  },
+  {
+    "id": 0,
+    "ida": "cM3ZIHQhhSoqnnKUQdx3752yoAnEyIqm",
+    "name": "Acnologia",
+    "class": "background",
     "collection": "",
+    "description": "",
+    "rarity": "c",
+    "price": {
+      "rubine": 1280,
+      "sapphire": 2
+    },
+    "image": "https://pollux.gg/backdrops/cM3ZIHQhhSoqnnKUQdx3752yoAnEyIqm.png"
+  },
+  {
+    "id": 0,
+    "ida": "hk7bkPYG2ULjouat8TxF75H9g0LQaStR",
+    "name": "Itachi and Sasuke",
+    "class": "background",
+    "collection": "",
+    "description": "",
+    "rarity": "c",
+    "price": {
+      "rubine": 1280,
+      "sapphire": 2
+    },
+    "image": "https://pollux.gg/backdrops/hk7bkPYG2ULjouat8TxF75H9g0LQaStR.png"
+  },
+  {
+    "id": 0,
+    "ida": "f5e6cb1126302c20ee5ad8f76cdbdfe3",
+    "name": "Darkstallers cover",
+    "class": "background",
+    "collection": "vidya",
+    "description": "",
+    "rarity": "u",
+    "price": {
+      "rubine": 2880,
+      "sapphire": 3
+    },
+    "image": "https://pollux.gg/backdrops/f5e6cb1126302c20ee5ad8f76cdbdfe3.png"
+  },
+  {
+    "id": 0,
+    "ida": "b49fef1b13d1404ad5671e6ce11c0173",
+    "name": "Bunch of Kirbys",
+    "class": "background",
+    "collection": "vidya",
+    "description": "",
+    "rarity": "u",
+    "price": {
+      "rubine": 2880,
+      "sapphire": 3
+    },
+    "image": "https://pollux.gg/backdrops/b49fef1b13d1404ad5671e6ce11c0173.png"
+  },
+  {
+    "id": 0,
+    "ida": "2shotdir",
+    "name": "2 Shot Diary",
+    "class": "background",
+    "collection": "",
+    "description": "",
+    "rarity": "u",
+    "price": {
+      "rubine": 2880,
+      "sapphire": 3
+    },
+    "image": "https://pollux.gg/backdrops/2shotdir.png"
+  },
+  {
+    "id": 0,
+    "ida": "e89439c8902efaa0f6abf026021ecf03",
+    "name": "Bolbbalgan4",
+    "class": "background",
+    "collection": "kpop",
+    "description": "",
+    "rarity": "u",
+    "price": {
+      "rubine": 2880,
+      "sapphire": 3
+    },
+    "image": "https://pollux.gg/backdrops/e89439c8902efaa0f6abf026021ecf03.png"
+  },
+  {
+    "id": 0,
+    "ida": "8059714f7648ee71f93c54d98bf77c6e",
+    "name": "Futuristic city",
+    "class": "background",
+    "collection": "",
+    "description": "",
+    "rarity": "r",
+    "price": {
+      "rubine": 6400,
+      "sapphire": 6
+    },
+    "image": "https://pollux.gg/backdrops/8059714f7648ee71f93c54d98bf77c6e.png"
+  },
+  {
+    "id": 0,
+    "ida": "7fdf98e57a8cbd838a8f2076acf70add",
+    "name": "Croatia by 大馬場三 - World Cup",
+    "class": "background",
+    "collection": "worldcup",
+    "description": "",
+    "rarity": "r",
+    "price": {
+      "rubine": 6400,
+      "sapphire": 6
+    },
+    "image": "https://pollux.gg/backdrops/7fdf98e57a8cbd838a8f2076acf70add.png"
+  },
+  {
+    "id": 0,
+    "ida": "8bc3323f512845dd23a00814cf49f176",
+    "name": "Majora's mask kid",
+    "class": "background",
+    "collection": "friday 13th",
+    "description": "",
+    "rarity": "r",
+    "price": {
+      "rubine": 6400,
+      "sapphire": 6
+    },
+    "image": "https://pollux.gg/backdrops/8bc3323f512845dd23a00814cf49f176.png"
+  },
+  {
+    "id": 0,
+    "ida": "hrZ6lBmTamE4FqhCQyvr5U0tIEqTYv0O",
+    "name": "North Pole",
+    "class": "background",
+    "collection": "",
+    "description": "",
+    "rarity": "r",
+    "price": {
+      "rubine": 6400,
+      "sapphire": 6
+    },
+    "image": "https://pollux.gg/backdrops/hrZ6lBmTamE4FqhCQyvr5U0tIEqTYv0O.png"
+  },
+  {
+    "id": 0,
+    "ida": "153468fdeff3b5b1239800eafe7868cc",
+    "name": "Girls Generation",
+    "class": "background",
+    "collection": "",
+    "description": "",
+    "rarity": "sr",
+    "price": {
+      "rubine": 12200,
+      "sapphire": 11
+    },
+    "image": "https://pollux.gg/backdrops/153468fdeff3b5b1239800eafe7868cc.png"
+  },
+  {
+    "id": 0,
+    "ida": "a6e0007bc07d526bdcc0cd614f1949ff",
+    "name": "Japan Retro City",
+    "class": "background",
+    "collection": "kpop",
+    "description": "",
+    "rarity": "sr",
+    "price": {
+      "rubine": 12200,
+      "sapphire": 11
+    },
+    "image": "https://pollux.gg/backdrops/a6e0007bc07d526bdcc0cd614f1949ff.png"
+  },
+  {
+    "id": 0,
+    "ida": "0c7a5ec00bc1963454cc42a5519d4909",
+    "name": "Shipwaifu",
+    "class": "background",
+    "collection": "",
+    "description": "",
+    "rarity": "sr",
+    "price": {
+      "rubine": 12200,
+      "sapphire": 11
+    },
+    "image": "https://pollux.gg/backdrops/0c7a5ec00bc1963454cc42a5519d4909.png"
+  },
+  {
+    "id": 0,
+    "ida": "ecf43dd978e20eca8b558764d9961f00",
+    "name": "Pyramid Head",
+    "class": "background",
+    "collection": "friday 13th",
     "description": "",
     "rarity": "ur",
     "price": {
-      "rubine": 5000,
-      "sapphire": 4
+      "rubine": 24400,
+      "sapphire": 20
     },
-    "image": "/loot/lootbox.png"
+    "image": "https://pollux.gg/backdrops/ecf43dd978e20eca8b558764d9961f00.png"
+  },
+  {
+    "id": 0,
+    "ida": "71238995d0d9ac4b7c0d73dd4cd592ed",
+    "name": "Wow helmet",
+    "class": "background",
+    "collection": "vidya",
+    "description": "",
+    "rarity": "ur",
+    "price": {
+      "rubine": 24400,
+      "sapphire": 20
+    },
+    "image": "https://pollux.gg/backdrops/71238995d0d9ac4b7c0d73dd4cd592ed.png"
   }
+  
 ]
