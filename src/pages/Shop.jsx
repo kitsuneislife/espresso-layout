@@ -11,6 +11,9 @@ import ShopSidebar from '../components/shop/ShopSidebar';
 import ShopItem from '../components/shop/ShopItem';
 import ShopBuy from '../components/shop/ShopBuy';
 
+import OpenBox from '../components/interactions/OpenBox';
+
+
 import DCompItems from '../dcomp/Items.json';
 
 function Shop() {
@@ -18,6 +21,10 @@ function Shop() {
   const { page, setPage } = React.useContext(GlobalContext);
   const [ shopPage, setShopPage ] = React.useState('all')
   const [ selectedItem, setSelectedItem ] = React.useState(null);
+  const [ openBoxModal, setBoxModal ] = React.useState(false);
+
+  const handleBoxModal = () => { setBoxModal(true); };
+  const handleCloseBoxModal = () => { setBoxModal(false); };
 
   const handleItemClick = (item) => { setSelectedItem(item) }
   const handleCloseShopBuy = () => { setSelectedItem(null) }
@@ -95,6 +102,10 @@ function Shop() {
           onClose={handleCloseShopBuy}
         />
       )}
+      <div>
+        <button onClick={handleBoxModal}>Open Box</button>
+        {openBoxModal && <OpenBox item={null} onClose={handleCloseBoxModal} />}
+      </div>
       
 </div>
   );

@@ -315,7 +315,7 @@
 }
 
 .vitrine_blur {
-  position: absolute;
+  /* position: absolute;
   z-index: 108;
   width: 100vw;
   height: 100vh;
@@ -323,7 +323,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fade-02 .3s forwards;
+  animation: fade-02 .3s forwards; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px) brightness(0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 108;
 }
 
 .buy_modal {

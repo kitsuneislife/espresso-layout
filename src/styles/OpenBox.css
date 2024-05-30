@@ -1,0 +1,88 @@
+@keyframes shake-01 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rise-fade {
+  to {
+    opacity: 1;
+    transform: var(--rotation) translateY(0);
+  }
+}
+
+.open_box_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 108;
+}
+
+.bottom_box {
+  position: absolute;
+  z-index: 109;
+  background-image: url('/loot/lootbox2.png');
+  width: 200px;
+  height: 140px;
+  overflow: hidden;
+  flex: 1 1 auto;
+  align-self: start;
+  justify-self: center;
+  background-position: top;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  animation: shake-01 0.8s;
+  bottom: 80px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  bottom: 40px;
+}
+
+.card {
+  position: relative;
+  z-index: 109;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: rise-fade var(--duration) forwards;
+  --rotation: rotate(0deg);
+
+  img {
+    width: 160px;
+  }
+}
+
+.card_left {
+  --rotation: rotate(-2deg);
+  --duration: 2s;
+}
+
+.card_middle {
+  margin-top: -5px;
+  --duration: 3s;
+}
+
+.card_right {
+  --rotation: rotate(2deg);
+  --duration: 4s;
+}
