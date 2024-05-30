@@ -7,11 +7,22 @@ import '../styles/Shop.css';
 import '../styles/Extra.css';
 
 import { GlobalContext } from '../toolbox/GlobalContext';
+import ShopSidebar from '../components/shop/ShopSidebar';
+import ShopItem from '../components/shop/ShopItem';
+import ShopBuy from '../components/shop/ShopBuy';
+
+import DCompItems from '../dcomp/Items.json';
 
 function Shop() {
 
   const { page, setPage } = React.useContext(GlobalContext);
   const [ shopPage, setShopPage ] = React.useState('all')
+  const [ selectedItem, setSelectedItem ] = React.useState(null);
+
+  const handleItemClick = (item) => { setSelectedItem(item) }
+  const handleCloseShopBuy = () => { setSelectedItem(null) }
+
+  const filterDCompItems = shopPage === 'all' ? DCompItems : DCompItems.filter(item => item.class === shopPage);
 
   return (
     <div className="shop">
@@ -33,71 +44,59 @@ function Shop() {
           <span>0</span>
         </div>
       </div>
-      <div className="shop_sidebar">
-        <div className={`shop_sidebar_separator
-          ${shopPage === 'all' ? 'selected' : ''}`}
-          onClick={() => setShopPage('all')}>
-          <i class="fa-solid fa-asterisk shop_sidebar_icon"></i>
-          <span>Tudo</span>
-        </div>
-        <div className={`shop_sidebar_separator
-          ${shopPage === 'items' ? 'selected' : ''}`}
-          onClick={() => setShopPage('items')}>
-          <i class="fa-solid fa-vial shop_sidebar_icon"></i>
-          <span>Itens</span>
-        </div>
-        <div className={`shop_sidebar_separator
-          ${shopPage === 'backgrounds' ? 'selected' : ''}`}
-          onClick={() => setShopPage('backgrounds')}>
-          <i class="fa-regular fa-images shop_sidebar_icon"></i>
-          <span>Fundos</span>
-        </div>
-        <div className={`shop_sidebar_separator
-          ${shopPage === 'bottoms' ? 'selected' : ''}`}
-          onClick={() => setShopPage('bottoms')}>
-          <i class="fa-regular fa-circle-dot shop_sidebar_icon"></i>
-          <span>Bottoms</span>
-        </div>
-        <div className={`shop_sidebar_separator
-          ${shopPage === 'stickers' ? 'selected' : ''}`}
-          onClick={() => setShopPage('stickers')}>
-          <i class="fa-solid fa-star shop_sidebar_icon"></i>
-          <span>Stickers</span>
-        </div>
-        <div className={`shop_sidebar_separator
-          ${shopPage === 'flags' ? 'selected' : ''}`}
-          onClick={() => setShopPage('flags')}>
-          <i class="fa-solid fa-flag shop_sidebar_icon"></i>
-          <span>Flags</span>
-        </div>
-      </div>
+      <ShopSidebar 
+        shopPage={shopPage}
+        setShopPage={setShopPage}
+      />
       <div className="shop_main">
         <div className="shop_table">
-          <div className="item_container ic_rarity ic_rarity_ur">
+          {/* <div className="item_container sc_rarity sc_rarity_ur">
             <div>
-              <div className="ic_header">
+              <div className="sc_header">
                 <div></div>
                 <span>IDOL PROJECT CLUB</span>
-                <i class="fa-regular fa-images inv_sidebar_icon"></i>
+                <i className="fa-regular fa-images inv_sidebar_scon"></i>
+                <div className="sc_subheader"></div>
               </div>
-              <div className="ic_body">
+              <div className="sc_body">
+              </div>
+              <div className="sc_footer">
+                <div className="sc_button_modal">
+                  <div>
+                    <i className="plx-rubine"></i>
+                    <span>5k</span>
+                  </div>
+                  <div>
+                    <i className="plx-sapphire"></i>
+                    <span>4</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="item_container ic_rarity ic_rarity_sr">
-            <div>
-              <div className="ic_header">
-                <div></div>
-                <span>IDOL PROJECT CLUB</span>
-                <i class="fa-regular fa-images inv_sidebar_icon"></i>
-              </div>
-              <div className="ic_body">
-              </div>
-            </div>
-          </div>
+          </div> */}
+          {filterDCompItems.map(item => (
+            <ShopItem
+              key={item.id}
+              title={item.name}
+              className={item.class}
+              collection={item.collection}
+              rarity={item.rarity}
+              price={item.price}
+              image={item.image}
+              id={item.id}
+              onClick={() => handleItemClick(item)}
+            />
+          ))}
         </div>
       </div>
-    </div>
+      {selectedItem && (
+        <ShopBuy
+          item={selectedItem}
+          onClose={handleCloseShopBuy}
+        />
+      )}
+      
+</div>
   );
 }
 

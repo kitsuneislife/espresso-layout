@@ -1,3 +1,22 @@
+
+.icon16 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.icon32 {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.icon48 {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
+
 .plx-rubine {
   background-image: url(/gems/RBN.png);
   background-size: contain;
@@ -15,5 +34,30 @@
 
 .plx-token {
   background-image: url(/gems/EVT.png);
+  background-size: contain;
+}
+
+.plx-rarity-c {
+  background-image: url(/extra/c.png);
+  background-size: contain;
+}
+
+.plx-rarity-u {
+  background-image: url(/extra/u.png);
+  background-size: contain;
+}
+
+.plx-rarity-r {
+  background-image: url(/extra/r.png);
+  background-size: contain;
+}
+
+.plx-rarity-sr {
+  background-image: url(/extra/sr.png);
+  background-size: contain;
+}
+
+.plx-rarity-ur {
+  background-image: url(/extra/ur.png);
   background-size: contain;
 }

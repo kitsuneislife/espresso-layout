@@ -142,7 +142,9 @@ html {
 
 html, body, main {
   cursor: url('/extra/cursor.png'), auto;
-  font-family: 'Nunito'
+  font-family: 'Nunito';
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color-strong) #1b1b1f55;
 }
 
 body {
