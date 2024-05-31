@@ -1,0 +1,24 @@
+.games {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'main main';
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-dimmer);
+}
+
+.games_body {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  background-color: #161522;
+  font-family: 'Panton';
+  color: white;
+
+  max-height: 100%;
+  overflow-y: auto;
+}

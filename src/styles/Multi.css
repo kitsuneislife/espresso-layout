@@ -1,0 +1,28 @@
+.multi_header {
+  grid-area: header;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  height: fit-content;
+  justify-content: right;
+}
+
+.multi_header_gems {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-family: Panton;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+
+.multi_header_icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}

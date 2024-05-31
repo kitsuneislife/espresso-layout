@@ -8,6 +8,7 @@ import { UserProvider, UserContext } from './toolbox/UserContext';
 
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
+import Games from './pages/Games';
 import Inventory from './pages/Inventory';
 import Shop from './pages/Shop';
 import Profile from './pages/Profile';
@@ -36,6 +37,7 @@ const MainApp = () => {
     <main>
       <Sidebar />
       {page === 'home' && <Home />}
+      {page === 'games' && <Games />}
       {page === 'collection' && <div>Oi, você está na página Collection</div>}
       {page === 'inventory' && <Inventory />}
       {page === 'shop' && <Shop />}
